@@ -1,0 +1,29 @@
+Health is a "State of complete physical, mental, and social well being.
+
+The below are the 4 main components of the Healthcare Delivery System.
+
+	Payers – Entities that finance health care services, such as insurance companies and government programs like Medicare and Medicaid.
+
+		Medicare is a federal program that covers individuals
+			• People age 65 or older,
+			• People under age 65 with certain disabilities, and
+			• People of all ages with End Stage Renal Disease (permanent kidney failure requiring dialysis or a kidney transplant).
+			
+		Medicaid is a program designed for the low income and disabled. By federal law, states must cover very poor, pregnant women, children and elderly 			peoples. States have the option of expanding eligibility
+	
+
+	Providers – Health care professionals and organizations that deliver medical services, including hospitals, clinics, and physicians.
+
+	Regulators – Government agencies and organizations that oversee and enforce health care laws, standards, and policies.
+
+	Suppliers – Companies that provide medical products and technologies, such as pharmaceutical firms and medical equipment manufacturers.
+
+	EOB (Explanation of Benefits)
+		Purpose: Sent by insurance companies to patients after a claim is processed.
+		Content: Lists services received, amounts billed, what the insurer paid, and what the patient owes.
+		Format: Typically paper-based.
+
+	 ERA (Electronic Remittance Advice)
+		Purpose: Sent by insurance companies to providers electronically.
+		Content: Includes payment details, adjustments, denial reasons, and patient responsibility.
+		Benefits: Reduces manual errors, speeds up payment posting, and lowers mailing costs.

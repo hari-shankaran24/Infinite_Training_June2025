@@ -1,0 +1,7 @@
+C:\Users\harish\Desktop\Training_Workspace\C#\Assignments\Assignment 1\Code1\Code1\bin\Debug\Code1.exe.config
+C:\Users\harish\Desktop\Training_Workspace\C#\Assignments\Assignment 1\Code1\Code1\bin\Debug\Code1.exe
+C:\Users\harish\Desktop\Training_Workspace\C#\Assignments\Assignment 1\Code1\Code1\bin\Debug\Code1.pdb
+C:\Users\harish\Desktop\Training_Workspace\C#\Assignments\Assignment 1\Code1\Code1\obj\Debug\Code1.csproj.AssemblyReference.cache
+C:\Users\harish\Desktop\Training_Workspace\C#\Assignments\Assignment 1\Code1\Code1\obj\Debug\Code1.csproj.CoreCompileInputs.cache
+C:\Users\harish\Desktop\Training_Workspace\C#\Assignments\Assignment 1\Code1\Code1\obj\Debug\Code1.exe
+C:\Users\harish\Desktop\Training_Workspace\C#\Assignments\Assignment 1\Code1\Code1\obj\Debug\Code1.pdb

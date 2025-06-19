@@ -102,7 +102,7 @@ namespace Code1
             Console.ReadLine();
         }
 
-        //-----------------------------------------Multiplication table of a number--------------------------------------
+        //-----------------------------------------Triple of the sum--------------------------------------
             static void Triple_sum()
         {
             Console.WriteLine("Enter the first number: ");

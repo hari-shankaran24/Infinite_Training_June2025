@@ -1,0 +1,6 @@
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 2\Code2\Code2\bin\Debug\Code2.exe.config
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 2\Code2\Code2\bin\Debug\Code2.exe
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 2\Code2\Code2\bin\Debug\Code2.pdb
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 2\Code2\Code2\obj\Debug\Code2.csproj.CoreCompileInputs.cache
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 2\Code2\Code2\obj\Debug\Code2.exe
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 2\Code2\Code2\obj\Debug\Code2.pdb

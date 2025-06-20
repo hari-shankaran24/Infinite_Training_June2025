@@ -62,20 +62,20 @@ namespace Code1
                 switch (op)
                 {
                     case '+':
-                        Console.WriteLine($"{num1} + {num2} = {num1 + num2}");
+                        Console.WriteLine($"The Sum result is {num1} + {num2} = {num1 + num2}");
                         break;
 
                     case '-':
-                        Console.WriteLine($"{num1} - {num2} = {num1 - num2}");
+                        Console.WriteLine($"The Difference result is {num1} - {num2} = {num1 - num2}");
                         break;
 
                     case '*':
-                        Console.WriteLine($"{num1} * {num2} = {num1 * num2}");
+                        Console.WriteLine($"The Multiplication result is {num1} * {num2} = {num1 * num2}");
                         break;
 
                     case '/':
                         if (num2 != 0)
-                            Console.WriteLine($"{num1} / {num2} = {num1 / (double)num2}");
+                            Console.WriteLine($"The Division result is {num1} / {num2} = {num1 / (double)num2}");
                         else
                             Console.WriteLine("Division by zero is not allowed.");
                         break;
@@ -90,7 +90,7 @@ namespace Code1
 
 
         //-----------------------------------------Multiplication table of a number--------------------------------------
-        static void Mul_Tab()
+        static void Mul_Tab() //Produces the multiplication table of the given number 
         {
             Console.WriteLine("Enter the number: ");
             num2 = int.Parse(Console.ReadLine());
@@ -103,7 +103,7 @@ namespace Code1
         }
 
         //-----------------------------------------Triple of the sum--------------------------------------
-            static void Triple_sum()
+            static void Triple_sum()  //Computes the sum of two given integers. If two values are the same, return the triple of their sum.
         {
             Console.WriteLine("Enter the first number: ");
             num1 = int.Parse(Console.ReadLine());
@@ -115,9 +115,13 @@ namespace Code1
             if (num1 == num2)
             {
                 Console.WriteLine($"The Sum is: {sum}");
-                Console.WriteLine($"The triple of the sum is {sum * 3}");
+                Console.WriteLine($"The two numbers are same and hence the triple of their sum is: {sum * 3}");
             }
-            Console.ReadLine();
+            else
+            {
+                Console.WriteLine("The given two numbers are not equal ");
+            }
+            Console.ReadLine();         
 
         }
 

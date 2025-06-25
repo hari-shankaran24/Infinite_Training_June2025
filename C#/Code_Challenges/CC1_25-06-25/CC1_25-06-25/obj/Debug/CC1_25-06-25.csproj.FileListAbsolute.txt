@@ -1,0 +1,6 @@
+C:\Users\harish\Desktop\Workspace\C#\Code_Challenges\CC1_25-06-25\CC1_25-06-25\bin\Debug\CC1_25-06-25.exe.config
+C:\Users\harish\Desktop\Workspace\C#\Code_Challenges\CC1_25-06-25\CC1_25-06-25\bin\Debug\CC1_25-06-25.exe
+C:\Users\harish\Desktop\Workspace\C#\Code_Challenges\CC1_25-06-25\CC1_25-06-25\bin\Debug\CC1_25-06-25.pdb
+C:\Users\harish\Desktop\Workspace\C#\Code_Challenges\CC1_25-06-25\CC1_25-06-25\obj\Debug\CC1_25-06-25.csproj.CoreCompileInputs.cache
+C:\Users\harish\Desktop\Workspace\C#\Code_Challenges\CC1_25-06-25\CC1_25-06-25\obj\Debug\CC1_25-06-25.exe
+C:\Users\harish\Desktop\Workspace\C#\Code_Challenges\CC1_25-06-25\CC1_25-06-25\obj\Debug\CC1_25-06-25.pdb

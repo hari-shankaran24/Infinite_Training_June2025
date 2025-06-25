@@ -27,14 +27,14 @@ namespace Code2
         static void Main(string[] args)
         {
             // Program.Swap();
-            //four_times.rows();
+            four_times.rows();
             //integer_to_day.day();
             //avg_arr.array();
             //avg_arr.ten_marks();
             //avg_arr.arr_copy();
-            String.str();
-            String.rev();
-            String.same_word();
+           // String.str();
+            //String.rev();
+            //String.same_word();
 
         }
     }

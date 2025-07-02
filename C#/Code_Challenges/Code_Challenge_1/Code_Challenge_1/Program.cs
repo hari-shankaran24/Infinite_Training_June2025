@@ -70,8 +70,8 @@ namespace CC1_25_06_25
         }
         static void Main(string[] args)
         {
-            Program.char_removal();
-            Program.Swap();
+            //Program.char_removal();
+            //Program.Swap();
             Program.greatest_number();
         }
     }

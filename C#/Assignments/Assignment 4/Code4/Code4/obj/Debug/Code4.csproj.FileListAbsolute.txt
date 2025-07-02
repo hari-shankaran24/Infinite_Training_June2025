@@ -1,0 +1,7 @@
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 4\Code4\Code4\obj\Debug\Code4.csproj.AssemblyReference.cache
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 4\Code4\Code4\obj\Debug\Code4.csproj.CoreCompileInputs.cache
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 4\Code4\Code4\bin\Debug\Code4.exe.config
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 4\Code4\Code4\bin\Debug\Code4.exe
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 4\Code4\Code4\bin\Debug\Code4.pdb
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 4\Code4\Code4\obj\Debug\Code4.exe
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 4\Code4\Code4\obj\Debug\Code4.pdb

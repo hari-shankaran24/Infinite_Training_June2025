@@ -1,0 +1,7 @@
+C:\Users\harish\Desktop\Workspace\C#\Code_Challenges\Code_Challenge_1\Code_Challenge_1\bin\Debug\Code_Challenge_1.exe.config
+C:\Users\harish\Desktop\Workspace\C#\Code_Challenges\Code_Challenge_1\Code_Challenge_1\bin\Debug\Code_Challenge_1.exe
+C:\Users\harish\Desktop\Workspace\C#\Code_Challenges\Code_Challenge_1\Code_Challenge_1\bin\Debug\Code_Challenge_1.pdb
+C:\Users\harish\Desktop\Workspace\C#\Code_Challenges\Code_Challenge_1\Code_Challenge_1\obj\Debug\Code_Challenge_1.csproj.AssemblyReference.cache
+C:\Users\harish\Desktop\Workspace\C#\Code_Challenges\Code_Challenge_1\Code_Challenge_1\obj\Debug\Code_Challenge_1.csproj.CoreCompileInputs.cache
+C:\Users\harish\Desktop\Workspace\C#\Code_Challenges\Code_Challenge_1\Code_Challenge_1\obj\Debug\Code_Challenge_1.exe
+C:\Users\harish\Desktop\Workspace\C#\Code_Challenges\Code_Challenge_1\Code_Challenge_1\obj\Debug\Code_Challenge_1.pdb

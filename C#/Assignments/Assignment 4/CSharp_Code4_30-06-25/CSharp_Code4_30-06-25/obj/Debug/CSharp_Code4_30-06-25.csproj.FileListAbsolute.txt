@@ -1,7 +1,0 @@
-C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 4\CSharp_Code4_30-06-25\CSharp_Code4_30-06-25\bin\Debug\CSharp_Code4_30-06-25.exe.config
-C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 4\CSharp_Code4_30-06-25\CSharp_Code4_30-06-25\bin\Debug\CSharp_Code4_30-06-25.exe
-C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 4\CSharp_Code4_30-06-25\CSharp_Code4_30-06-25\bin\Debug\CSharp_Code4_30-06-25.pdb
-C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 4\CSharp_Code4_30-06-25\CSharp_Code4_30-06-25\obj\Debug\CSharp_Code4_30-06-25.csproj.AssemblyReference.cache
-C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 4\CSharp_Code4_30-06-25\CSharp_Code4_30-06-25\obj\Debug\CSharp_Code4_30-06-25.csproj.CoreCompileInputs.cache
-C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 4\CSharp_Code4_30-06-25\CSharp_Code4_30-06-25\obj\Debug\CSharp_Code4_30-06-25.exe
-C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 4\CSharp_Code4_30-06-25\CSharp_Code4_30-06-25\obj\Debug\CSharp_Code4_30-06-25.pdb

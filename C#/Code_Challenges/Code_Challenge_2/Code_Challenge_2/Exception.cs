@@ -2,14 +2,17 @@
 
 namespace Code_Challenge_2
 {
-    class NumberValidator
+    class Validator
     {
-        static void CheckNumber(int num)
+        public static void CheckNumber(int num)
         {
             if (num < 0)
-                throw new ArgumentException("Number is negative.");
+                throw new Exception("Number is negative.");
         }
+    }
 
+    class program
+    {
         static void Main()
         {
             Console.Write("Enter a number: ");
@@ -17,10 +20,10 @@ namespace Code_Challenge_2
 
             try
             {
-                CheckNumber(number);
+                Validator.CheckNumber(number);
                 Console.WriteLine("Number is valid.");
             }
-            catch (ArgumentException ex)
+            catch (Exception ex)
             {
                 Console.WriteLine("Error: " + ex.Message);
             }

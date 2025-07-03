@@ -1,0 +1,7 @@
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Code5\Code5\bin\Debug\Code5.exe.config
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Code5\Code5\bin\Debug\Code5.exe
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Code5\Code5\bin\Debug\Code5.pdb
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Code5\Code5\obj\Debug\Code5.csproj.AssemblyReference.cache
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Code5\Code5\obj\Debug\Code5.csproj.CoreCompileInputs.cache
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Code5\Code5\obj\Debug\Code5.exe
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Code5\Code5\obj\Debug\Code5.pdb

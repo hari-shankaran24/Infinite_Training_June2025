@@ -1,0 +1,7 @@
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 6\Code6\Code6\bin\Debug\Code6.exe.config
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 6\Code6\Code6\bin\Debug\Code6.exe
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 6\Code6\Code6\bin\Debug\Code6.pdb
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 6\Code6\Code6\obj\Debug\Code6.csproj.AssemblyReference.cache
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 6\Code6\Code6\obj\Debug\Code6.csproj.CoreCompileInputs.cache
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 6\Code6\Code6\obj\Debug\Code6.exe
+C:\Users\harish\Desktop\Workspace\C#\Assignments\Assignment 6\Code6\Code6\obj\Debug\Code6.pdb

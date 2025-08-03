@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Assignment 2 - Simplified</title>
+    <style>
+        /* 1. Image Overlay Effect on Hover */
+        .image-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin-bottom: 40px;
+        }
+
+            .image-container img {
+                width: 100%;
+                height: 300px;
+                display: block;
+            }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 300px; 
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            line-height: 300px;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .image-container:hover .overlay {
+            opacity: 1;
+        }
+
+        /* 2. CSS3 Button  */
+        .css3-button {
+            background-color: cadetblue;
+            color: black;
+            padding: 12px 25px;
+            font-size: 18px;
+            border-radius: 18px;
+            cursor: pointer;
+        }
+
+            .css3-button:hover {
+                background-color: bisque;
+            }
+
+        /* 3. Descriptive/Definition List */
+        dl {
+            background-color: burlywood;
+            color: black;
+            width: 320px;
+            padding: 15px 20px;
+            font-family: Arial, sans-serif;
+            margin-bottom: 40px;
+        }
+
+        dt {
+            font-weight: bold;
+            margin-top: 15px;
+            font-size: 18px;
+        }
+
+        dd {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* 4. Animation Delay */
+        .svg-animation-container {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 40px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 5. Tribute Page  */
+        .tribute-container {
+            max-width: 600px;
+            margin: 0 auto 60px;
+            background-color: #e6f0ff;
+            padding: 20px 30px;
+            font-family: Arial, sans-serif;
+        }
+
+            .tribute-container img {
+                width: 100%;
+                display: block;
+                margin-bottom: 15px;
+            }
+
+            .tribute-container h1 {
+                font-size: 28px;
+                margin-bottom: 10px;
+                color: #004080;
+                text-align: center;
+            }
+
+            .tribute-container p {
+                font-size: 18px;
+                line-height: 1.5;
+                color: #333;
+            }
+
+            .tribute-container ul {
+                margin-top: 15px;
+                padding-left: 20px;
+                color: #004080;
+                font-weight: bold;
+            }
+
+                .tribute-container ul li {
+                    font-weight: normal;
+                    font-size: 16px;
+                    margin-bottom: 8px;
+                }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Image Overlay Effect -->
+    <div class="image-container">
+        <img src="C:\Users\harish\Desktop\Workspace\HTML\Images\Andromeda_Galaxy.jpg" alt="Galaxy" />
+        <div class="overlay">Andromeda Galaxy</div>
+    </div>
+
+    <!-- 2. CSS3 Button -->
+    <button class="css3-button">Click Me!</button>
+
+    <!-- 3. Descriptive/Definition List -->
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language - Standard markup language for creating web pages.</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets - Used to style and layout web pages.</dd>
+        <dt>JavaScript</dt>
+        <dd>Programming language that enables interactive web pages.</dd>
+    </dl>
+
+    <!-- 4. Animation Delay -->
+    <div class="svg-animation-container">
+        <h2 style="text-align:center;">Animation Delay</h2>
+        <svg width="300" height="300" viewBox="-65 -60 200 200">
+            <circle cx="0" cy="0" r="30" fill="#cd803d">
+                <animate attributeName="r"
+                         values="30;50;30"
+                         dur="3s"
+                         begin="2s"
+                         repeatCount="indefinite" />
+            </circle>
+        </svg>
+    </div>
+
+    <!-- 5. Tribute Page -->
+    <div class="tribute-container">
+        <img src="C:\Users\harish\Desktop\Workspace\HTML\Images\Isaac_Newton.jpg" alt="Sir Isaac Newton" />
+        <h1>Sir Isaac Newton</h1>
+        <p>Sir Isaac Newton was an English mathematician, physicist, astronomer, and author who is widely recognized as one of the greatest mathematicians and most influential scientists of all time. His work laid the foundation for classical mechanics and modern physics.</p>
+        <ul>
+            <li>Formulated the laws of motion and universal gravitation</li>
+            <li>Invented calculus independently (alongside Leibniz)</li>
+            <li>Made groundbreaking discoveries in optics</li>
+            <li>Published the Principia Mathematica in 1687</li>
+        </ul>
+    </div>
+
+</body>
+</html>

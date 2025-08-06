@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>7. Add Index to List Items</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    function addIndex() {
+        $("#myList li").each(function(index) {
+            $(this).text(index + " " + $(this).text());
+        });
+    }
+    </script>
+</head>
+<body>
+    <h2>7. Add Index to List Items</h2>
+    <ul id="myList">
+        <li>CSHARP</li>
+        <li>SQL</li>
+        <li>ADO</li>
+    </ul>
+    <button onclick="addIndex()">Add Index to List</button>
+</body>
+</html>

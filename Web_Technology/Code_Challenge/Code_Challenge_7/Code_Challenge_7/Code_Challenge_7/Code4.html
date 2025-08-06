@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Hide Odd Table Rows</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#btn1').click(function () {
+                $('table tr:odd').hide();
+            });
+        })
+    </script>
+</head>
+<body>
+    <h2>4. Hide Odd Rows</h2>
+
+    <table border="1">
+        <tr><td>Row 0</td></tr>
+        <tr><td>Row 1</td></tr>
+        <tr><td>Row 2</td></tr>
+        <tr><td>Row 3</td></tr>
+        <tr><td>Row 4</td></tr>
+    </table>
+    <br />
+    <button id="btn1">Hide Odd Rows</button>
+</body>
+</html>

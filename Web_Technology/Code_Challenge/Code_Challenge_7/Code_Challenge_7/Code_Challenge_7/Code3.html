@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>3. Button Click Event Example</title>
+    <script>
+        
+        window.onload = function () {
+            var btn = document.createElement("button");
+            btn.innerHTML = "Click Me";
+
+            btn.addEventListener("click", function () {
+                console.log("Button was clicked!");
+            });
+            document.body.appendChild(btn);
+        }
+    </script>
+</head>
+<body>
+    <h2>3. Click Event</h2>
+</body>
+</html>

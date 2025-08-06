@@ -146,18 +146,32 @@
     </dl>
 
     <!-- 4. Animation Delay -->
+
     <div class="svg-animation-container">
         <h2 style="text-align:center;">Animation Delay</h2>
-        <svg width="300" height="300" viewBox="-65 -60 200 200">
-            <circle cx="0" cy="0" r="30" fill="#cd803d">
-                <animate attributeName="r"
-                         values="30;50;30"
-                         dur="3s"
-                         begin="2s"
-                         repeatCount="indefinite" />
-            </circle>
-        </svg>
+        <div id="svg-animation">
+            <svg width="300" height="300" viewBox="-65 -60 200 200">
+                <circle cx="0" cy="0" r="30" fill="#cd803d">
+                    <animate attributeName="r"
+                             values="30;50;30"
+                             dur="3s"
+                             begin="2s"
+                             repeatCount="indefinite" />
+                </circle>
+            </svg>
+        </div>
+        <button class="restart-btn" onclick="restartSVGAnimation()">Restart Animation</button>
     </div>
+
+    <script>
+        // Q4 - Animation Restart
+        function restartSVGAnimation() {
+            const container = document.getElementById('svg-animation');
+            const original = container.innerHTML;
+            container.innerHTML = original; // Re-render SVG to restart animation
+        }
+    </script>
+
 
     <!-- 5. Tribute Page -->
     <div class="tribute-container">

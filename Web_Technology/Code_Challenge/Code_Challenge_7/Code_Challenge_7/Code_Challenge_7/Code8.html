@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Append Paragraph on Input Change</title>
+</head>
+<body>
+    <h2>Append a &lt;p&gt; element when input is changed</h2>
+
+    <input type="text" id="txt" />
+
+    <div id="box"></div>
+
+    <script>
+        var txt = document.getElementById("txt");
+        var box = document.getElementById("box");
+
+        txt.addEventListener("change", function () {
+            var msg = document.createElement("p");
+            msg.innerHTML = "Input field was changed!";
+            box.appendChild(msg);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>H1 Child of Div</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("div > h1").css("background-color", "yellow");
+        });
+    </script>
+</head>
+<body>
+    <h2>5. Children of div</h2>
+
+    <div>
+        <h1>First Element</h1>
+    </div>
+
+    <h1>Second Element</h1>
+
+    <div>
+        <h1>Third Element</h1>
+    </div>
+</body>
+</html>

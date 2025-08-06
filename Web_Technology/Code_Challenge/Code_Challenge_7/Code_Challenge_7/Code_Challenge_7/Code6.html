@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>6. Get Single Element </title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function selectSingle() {
+            $("li").eq(2).css("color", "Blue");
+        }
+    </script>
+</head>
+<body>
+    <h2>6. Get a Single Element </h2>
+    <ul id="myList">
+        <li>CSHARP</li>
+        <li>SQL</li>
+        <li>ADO</li>
+    </ul>
+    <button onclick="selectSingle()">Select 3nd Item</button>
+</body>
+</html>

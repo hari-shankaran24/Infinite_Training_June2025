@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5FFDEC65-1F05-45B2-8929-3FF47761B2F3}</ProjectGuid>
+    <ProjectGuid>{B4265A07-F3ED-4AC9-A6A4-887067F7989B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Code_Challenge_7</RootNamespace>
-    <AssemblyName>Code_Challenge_7</AssemblyName>
+    <RootNamespace>Railway_Reservation_System</RootNamespace>
+    <AssemblyName>Railway_Reservation_System</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,19 +45,10 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ticket.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Code1.html" />
-    <Content Include="Code2.html" />
-    <Content Include="Code3.html" />
-    <Content Include="Code4.html" />
-    <Content Include="Code5.html" />
-    <Content Include="Code6.html" />
-    <Content Include="Code7.html" />
-    <Content Include="Code8.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

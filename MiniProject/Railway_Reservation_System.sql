@@ -23,8 +23,13 @@ create table Customer (
     IsDeleted bit default 0
 );
 
+
 ------------------------------------------------------------
 select * from TrainDetails
+
+UPDATE TrainDetails
+SET SeatsAvailable = 30
+WHERE TrainNo = '1013' AND ClassType = 'Sleeper';  -- use your actual values
 
 create table TrainDetails (
     TrainNo varchar(10) not null,
@@ -202,55 +207,188 @@ begin
 end;
 
 ------------------------------------------------------------
+--create or alter procedure sp_CancelFullBooking
+--    @BookingID varchar(20),
+--    @Phone varchar(15)
+--as
+--begin
+--    set nocount on;
+--    declare @CustID varchar(20), @Seats int, @ClassType varchar(20), @TrainNo varchar(10), @Amount decimal(10,2);
+--    select @CustID = b.CustID, @Seats = b.SeatsBooked, @ClassType = b.ClassType, @TrainNo = b.TrainNo, @Amount = b.TotalCost
+--    from Booking b join Customer c on b.CustID = c.CustID
+--    where b.BookingID = @BookingID and c.Phone = @Phone;
+--    if @CustID is null
+--        throw 50002, 'Booking not found for provided phone.', 1;
+--    update Passenger set IsCancelled = 1 where BookingID = @BookingID;
+--    insert into Cancellation (BookingID, PassengerID, RefundAmount)
+--    values (@BookingID, null, @Amount * 0.5);
+--    update TrainDetails set SeatsAvailable = SeatsAvailable + @Seats where TrainNo = @TrainNo and ClassType = @ClassType;
+--end;
+
 create or alter procedure sp_CancelFullBooking
     @BookingID varchar(20),
     @Phone varchar(15)
 as
 begin
     set nocount on;
-    declare @CustID varchar(20), @Seats int, @ClassType varchar(20), @TrainNo varchar(10), @Amount decimal(10,2);
-    select @CustID = b.CustID, @Seats = b.SeatsBooked, @ClassType = b.ClassType, @TrainNo = b.TrainNo, @Amount = b.TotalCost
-    from Booking b join Customer c on b.CustID = c.CustID
+
+    declare 
+        @CustID varchar(20),
+        @ClassType varchar(20),
+        @TrainNo varchar(10),
+        @TotalCost decimal(10,2),
+        @TotalSeats int,
+        @ActiveSeats int,
+        @RefundPerSeat decimal(10,2);
+
+    -- Get booking details
+    select 
+        @CustID = b.CustID,
+        @ClassType = b.ClassType,
+        @TrainNo = b.TrainNo,
+        @TotalCost = b.TotalCost,
+        @TotalSeats = b.SeatsBooked
+    from Booking b
+    join Customer c on b.CustID = c.CustID
     where b.BookingID = @BookingID and c.Phone = @Phone;
+
     if @CustID is null
+    begin
         throw 50002, 'Booking not found for provided phone.', 1;
-    update Passenger set IsCancelled = 1 where BookingID = @BookingID;
+        return;
+    end
+
+    -- Count how many passengers are still active
+    select @ActiveSeats = count(*)
+    from Passenger
+    where BookingID = @BookingID and IsCancelled = 0;
+
+    if @ActiveSeats = 0
+    begin
+        throw 50005, 'All passengers in this booking are already cancelled.', 1;
+        return;
+    end
+
+    -- Refund per seat (based on original total)
+    set @RefundPerSeat = (@TotalCost / nullif(@TotalSeats, 0)) * 0.5;
+
+    -- Cancel only active passengers
+    update Passenger
+    set IsCancelled = 1
+    where BookingID = @BookingID and IsCancelled = 0;
+
+    -- Insert cancellation record for each active passenger
     insert into Cancellation (BookingID, PassengerID, RefundAmount)
-    values (@BookingID, null, @Amount * 0.5);
-    update TrainDetails set SeatsAvailable = SeatsAvailable + @Seats where TrainNo = @TrainNo and ClassType = @ClassType;
+    select 
+        p.BookingID,
+        p.PassengerID,
+        @RefundPerSeat
+    from Passenger p
+    where p.BookingID = @BookingID and p.IsCancelled = 1
+        and not exists (
+            select 1 from Cancellation c 
+            where c.PassengerID = p.PassengerID
+        );
+
+    -- Update seats correctly
+    update TrainDetails
+    set SeatsAvailable = SeatsAvailable + @ActiveSeats
+    where TrainNo = @TrainNo and ClassType = @ClassType;
 end;
 
 ------------------------------------------------------------
+--create or alter procedure sp_CancelPassengersByPassengerIDs
+--    @PassengerIDs varchar(max)
+--as
+--begin
+--    set nocount on;
+--    declare @xml xml = cast('<i>' + replace(@PassengerIDs, ',', '</i><i>') + '</i>' as xml);
+--    declare @Ids table (PassengerID varchar(20));
+--    insert into @Ids (PassengerID)
+--    select T.c.value('.', 'varchar(20)') from @xml.nodes('/i') T(c);
+--    declare @BookingID varchar(20), @TrainNo varchar(10), @ClassType varchar(20);
+--    declare @CancelledSeats int;
+--    select top 1 @BookingID = b.BookingID, @TrainNo = b.TrainNo, @ClassType = b.ClassType
+--    from Passenger p join @Ids i on p.PassengerID = i.PassengerID
+--    join Booking b on p.BookingID = b.BookingID;
+--    select @CancelledSeats = count(*)
+--    from Passenger p join @Ids i on p.PassengerID = i.PassengerID
+--    where p.IsCancelled = 0;
+--    if @CancelledSeats = 0
+--    begin
+--        throw 50003, 'No valid passengers to cancel.', 1;
+--        return;
+--    end
+--    update p set IsCancelled = 1
+--    from Passenger p join @Ids i on p.PassengerID = i.PassengerID
+--    where p.IsCancelled = 0;
+--    insert into Cancellation (BookingID, PassengerID, RefundAmount)
+--    select b.BookingID, p.PassengerID, (b.TotalCost / nullif(b.SeatsBooked, 0)) * 0.5
+--    from Passenger p join @Ids i on p.PassengerID = i.PassengerID
+--    join Booking b on p.BookingID = b.BookingID;
+--    update TrainDetails set SeatsAvailable = SeatsAvailable + @CancelledSeats
+--    where TrainNo = @TrainNo and ClassType = @ClassType;
+--end;
+
 create or alter procedure sp_CancelPassengersByPassengerIDs
     @PassengerIDs varchar(max)
 as
 begin
     set nocount on;
+
+    -- Convert comma-separated list to table
     declare @xml xml = cast('<i>' + replace(@PassengerIDs, ',', '</i><i>') + '</i>' as xml);
     declare @Ids table (PassengerID varchar(20));
     insert into @Ids (PassengerID)
     select T.c.value('.', 'varchar(20)') from @xml.nodes('/i') T(c);
-    declare @BookingID varchar(20), @TrainNo varchar(10), @ClassType varchar(20);
-    declare @CancelledSeats int;
-    select top 1 @BookingID = b.BookingID, @TrainNo = b.TrainNo, @ClassType = b.ClassType
-    from Passenger p join @Ids i on p.PassengerID = i.PassengerID
-    join Booking b on p.BookingID = b.BookingID;
-    select @CancelledSeats = count(*)
-    from Passenger p join @Ids i on p.PassengerID = i.PassengerID
+
+    -- Table to hold valid (not already cancelled) passengers
+    declare @ValidToCancel table (PassengerID varchar(20), BookingID varchar(20));
+
+    -- Insert only passengers who are NOT already cancelled
+    insert into @ValidToCancel (PassengerID, BookingID)
+    select p.PassengerID, p.BookingID
+    from Passenger p
+    join @Ids i on p.PassengerID = i.PassengerID
     where p.IsCancelled = 0;
-    if @CancelledSeats = 0
+
+    -- Check if there are any valid passengers to cancel
+    if not exists (select 1 from @ValidToCancel)
     begin
         throw 50003, 'No valid passengers to cancel.', 1;
         return;
     end
-    update p set IsCancelled = 1
-    from Passenger p join @Ids i on p.PassengerID = i.PassengerID
-    where p.IsCancelled = 0;
+
+    declare @BookingID varchar(20), @TrainNo varchar(10), @ClassType varchar(20);
+    select top 1 
+        @BookingID = b.BookingID, 
+        @TrainNo = b.TrainNo, 
+        @ClassType = b.ClassType
+    from Booking b
+    join Passenger p on b.BookingID = p.BookingID
+    join @ValidToCancel v on p.PassengerID = v.PassengerID;
+
+    declare @CancelledSeats int;
+    select @CancelledSeats = count(*) from @ValidToCancel;
+
+    -- Mark passengers as cancelled
+    update p
+    set IsCancelled = 1
+    from Passenger p
+    join @ValidToCancel v on p.PassengerID = v.PassengerID;
+
+    -- Insert refund record for each newly cancelled passenger
     insert into Cancellation (BookingID, PassengerID, RefundAmount)
-    select b.BookingID, p.PassengerID, (b.TotalCost / nullif(b.SeatsBooked, 0)) * 0.5
-    from Passenger p join @Ids i on p.PassengerID = i.PassengerID
-    join Booking b on p.BookingID = b.BookingID;
-    update TrainDetails set SeatsAvailable = SeatsAvailable + @CancelledSeats
+    select 
+        b.BookingID, 
+        v.PassengerID, 
+        (b.TotalCost / nullif(b.SeatsBooked, 0)) * 0.5
+    from @ValidToCancel v
+    join Booking b on v.BookingID = b.BookingID;
+
+    -- Add cancelled seats back to TrainDetails
+    update TrainDetails
+    set SeatsAvailable = SeatsAvailable + @CancelledSeats
     where TrainNo = @TrainNo and ClassType = @ClassType;
 end;
 

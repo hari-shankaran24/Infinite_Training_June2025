@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.cs" />
     <Compile Include="Book.cs" />
     <Compile Include="CancelFull.cs" />
     <Compile Include="CancelSel.cs" />
@@ -53,7 +52,6 @@
     <Compile Include="Register.cs" />
     <Compile Include="Report.cs" />
     <Compile Include="Search.cs" />
-    <Compile Include="Ticket.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,0 +1,14 @@
+-------------------- TICKET --------------------
+BookingID   : B00006
+BookingDate : 8/11/2025 11:07:37 AM
+TotalCost   : 200.00
+TravelDate  : 10/10/2025 12:00:00 AM
+Train       : Shatabdi Express
+From        : Chennai
+To          : Bangalore
+Departure   : 8/10/2025 8:15:43 PM
+
+Passengers:
+PassengerID | Name | Age | Gender | Berth | Status
+P00038 | John | 22 | Male | Lower | Confirmed
+-----------------------------------------------

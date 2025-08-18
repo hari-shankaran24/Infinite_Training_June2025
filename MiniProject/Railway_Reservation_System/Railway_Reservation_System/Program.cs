@@ -220,7 +220,7 @@ namespace Railway_Reservation_System
 
         static void SaveTicketToFile(string ticketText, string bookingId)
         {
-            string downloadFolder = @"C:\Users\harish\Desktop\Workspace\MiniProject\Tickets";
+            string downloadFolder = @"C:\Users\harish\Desktop\Workspace\MiniProject\Railway_Reservation_System\Tickets";
 
             if (!Directory.Exists(downloadFolder))
             {

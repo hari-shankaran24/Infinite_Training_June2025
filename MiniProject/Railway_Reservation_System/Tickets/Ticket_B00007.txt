@@ -1,0 +1,15 @@
+-------------------- TICKET --------------------
+BookingID   : B00007
+BookingDate : 8/12/2025 12:13:31 PM
+TotalCost   : 900.00
+TravelDate  : 10/10/2025 12:00:00 AM
+Train       : Rajdhani Express
+From        : Chennai
+To          : Delhi
+Departure   : 8/10/2025 8:15:43 PM
+
+Passengers:
+PassengerID | Name | Age | Gender | Berth | Status
+P00039 | Hari | 22 | Male | Lower | Cancelled
+P00040 | John | 22 | Male | Middle | Cancelled
+-----------------------------------------------

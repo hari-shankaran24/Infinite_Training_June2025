@@ -1,0 +1,6 @@
+C:\Users\harish\Desktop\Workspace\MiniProject\ElectricityBillingSolution\Electricity_Bill\Electricity.Data\bin\Debug\Electricity.Data.dll
+C:\Users\harish\Desktop\Workspace\MiniProject\ElectricityBillingSolution\Electricity_Bill\Electricity.Data\bin\Debug\Electricity.Data.pdb
+C:\Users\harish\Desktop\Workspace\MiniProject\ElectricityBillingSolution\Electricity_Bill\Electricity.Data\obj\Debug\Electricity.Data.csproj.AssemblyReference.cache
+C:\Users\harish\Desktop\Workspace\MiniProject\ElectricityBillingSolution\Electricity_Bill\Electricity.Data\obj\Debug\Electricity.Data.csproj.CoreCompileInputs.cache
+C:\Users\harish\Desktop\Workspace\MiniProject\ElectricityBillingSolution\Electricity_Bill\Electricity.Data\obj\Debug\Electricity.Data.dll
+C:\Users\harish\Desktop\Workspace\MiniProject\ElectricityBillingSolution\Electricity_Bill\Electricity.Data\obj\Debug\Electricity.Data.pdb

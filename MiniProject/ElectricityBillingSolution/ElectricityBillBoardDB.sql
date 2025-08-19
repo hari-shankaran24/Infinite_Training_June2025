@@ -13,8 +13,8 @@ VALUES ('admin', 'admin@123');
 
 DROP TABLE dbo.ElectricityBill;
 
-USE ElectricityBillBoardDB;
-CREATE TABLE dbo.ElectricityBill(
+
+CREATE TABLE ElectricityBill(
     bill_id INT IDENTITY(1,1) PRIMARY KEY,
     consumer_number VARCHAR(20) NOT NULL,
     consumer_name VARCHAR(50) NOT NULL,

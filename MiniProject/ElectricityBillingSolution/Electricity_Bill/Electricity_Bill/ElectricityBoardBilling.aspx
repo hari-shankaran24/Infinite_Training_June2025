@@ -1,134 +1,126 @@
-﻿
-
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ElectricityBoardBilling.aspx.cs" Inherits="Electricity_Bill.ElectricityBoardBilling" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ElectricityBoardBilling.aspx.cs" Inherits="Electricity_Bill.ElectricityBoardBilling" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Electricity Board - Billing Automation</title>
     <link href="Styles.css" rel="stylesheet" />
+
     <style type="text/css">
-        /* Global reset and layout styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
-            padding: 20px;
-        }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: LightGray;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        padding: 20px;
+    }
 
-        .page-container {
-            max-width: 1000px; /* Limiting the max-width of the content */
-            width: 100%;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
+    .page-container {
+        max-width: 1000px;
+        width: 100%;
+        background-color: White;
+        border-radius: 10px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
 
-        /* Title Style */
-        h1 {
-            font-size: 32px;     
-            margin-top: 20px;    
-            color: #333;         
-            font-weight: bold;   
-        }
+    h1 {
+        font-size: 32px;
+        margin-top: 20px;
+        color: DarkSlateGray;
+        font-weight: bold;
+    }
 
-        /* Section Styles */
-        .section {
-            margin: 20px 0;
-        }
+    .section {
+        margin: 20px 0;
+    }
 
-        .section h2 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
+    .section h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
 
-        /* Input Row Styling */
-        .input-row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-bottom: 15px;
-        }
+    .input-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
 
-        .input-text {
-            padding: 10px;
-            font-size: 16px;
-            margin-right: 10px;
-            width: calc(33% - 10px); /
-            min-width: 200px;
-        }
+    .input-text {
+        padding: 10px;
+        font-size: 16px;
+        margin-right: 10px;
+        width: calc(33% - 10px);
+        min-width: 200px;
+    }
 
-        .input-row span {
-            display: block;
-            margin-top: 10px;
-        }
+    .input-row span {
+        display: block;
+        margin-top: 10px;
+    }
 
-        /* Button Styling */
-        .btn {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            width: 100%;
-            margin-top: 10px;
-        }
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: DodgerBlue;
+        color: White;
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+        margin-top: 10px;
+    }
 
-        .btn:hover {
-            background-color: #0056b3;
-        }
+    .btn:hover {
+        background-color: MediumBlue;
+    }
 
-        .logout-btn {
-            background-color: #f44336;
-        }
+    .logout-btn {
+        background-color: Firebrick;
+    }
 
-        /* GridView Styling */
-        .gridview {
-            width: 100%;
-            margin-top: 20px;
-            border-collapse: collapse;
-        }
+    .gridview {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
 
-        .gridview th, .gridview td {
-            padding: 12px;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
+    .gridview th, .gridview td {
+        padding: 12px;
+        text-align: center;
+        border: 1px solid LightGray;
+    }
 
-        .gridview th {
-            background-color: #f2f2f2;
-        }
+    .gridview th {
+        background-color: Snow;
+    }
 
-        /* Message and Summary Labels */
-        .msg-label, .summary-label {
-            font-size: 16px;
-            font-weight: bold;
-            margin-top: 15px;
-            color: red;
-        }
+    .msg-label, .summary-label {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 15px;
+        color: Red;
+    }
 
-        .summary-label {
-            color: green;
-        }
+    .summary-label {
+        color: ForestGreen;
+    }
 
-        /* Logout Section */
-        .logout-section {
-            text-align: center;
-            margin-top: 30px;
-        }
-    </style>
+    .logout-section {
+        text-align: center;
+        margin-top: 30px;
+    }
+</style>
+
 
 </head>
 <body>
@@ -172,7 +164,7 @@
                 <!-- GridView for Bills -->
                 <asp:GridView ID="gvBills" runat="server" AutoGenerateColumns="False" CssClass="gridview" Height="135px" Width="439px">
                     <Columns>
-                        <asp:BoundField DataField="consumer_number" HeaderText="Consumer #" />
+                        <asp:BoundField DataField="consumer_number" HeaderText="Consumer Number" />
                         <asp:BoundField DataField="consumer_name" HeaderText="Consumer Name" />
                         <asp:BoundField DataField="units_consumed" HeaderText="Units" />
                         <asp:BoundField DataField="bill_amount" HeaderText="Bill Amount" />

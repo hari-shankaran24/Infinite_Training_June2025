@@ -24,7 +24,13 @@ CREATE TABLE ElectricityBill(
 
 select * from ElectricityBill
 
+DELETE FROM ElectricityBill
+WHERE bill_id = 5;
 
 
 
  
+ select * from Shippers
+
+
+ EXEC CustOrdersOrders 'ALFKI'

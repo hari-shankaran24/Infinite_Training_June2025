@@ -1,0 +1,32 @@
+﻿@model List<ContactApp.Models.Contact>
+
+@{ ViewBag.Title = "Contact List"; }
+
+<h2>Contact List</h2>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var contact in Model)
+        {
+<tr>
+    <td>@contact.FirstName</td>
+    <td>@contact.LastName</td>
+    <td>@contact.Email</td>
+    <td>
+        @Html.ActionLink("Delete", "Delete", new { id = contact.Id }, new { @class = "btn btn-danger btn-sm" })
+    </td>
+</tr>}
+    </tbody>
+</table>
+
+<div>
+    @Html.ActionLink("Add New Contact", "Create", null, new { @class = "btn btn-primary" })
+</div>

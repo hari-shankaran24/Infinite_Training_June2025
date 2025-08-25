@@ -1,0 +1,28 @@
+﻿@model Movies.Models.Movie
+
+@{
+    ViewBag.Title = "Delete Movie";
+}
+
+<h2>Delete Movie</h2>
+
+<p>Are you sure you want to delete this movie?</p>
+
+<dl>
+    <dt>Movie Name:</dt>
+    <dd>@Model.MovieName</dd>
+
+    <dt>Director:</dt>
+    <dd>@Model.DirectorName</dd>
+
+    <dt>Release Date:</dt>
+    <dd>@Model.DateOfRelease.ToShortDateString()</dd>
+</dl>
+
+@using (Html.BeginForm("DeleteConfirmed", "Movie", new { id = Model.Mid }))
+{
+    @Html.AntiForgeryToken()
+    <button type="submit">Confirm Delete</button>
+}
+
+<p>@Html.ActionLink("Cancel", "Index")</p>

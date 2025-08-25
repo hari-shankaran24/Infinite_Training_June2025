@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Movies.Models.Movie>
+@{
+    ViewBag.Title = "Movies By Year";
+}
+
+<h2>Search Movies by Year</h2>
+
+<!-- Search Form -->
+@using (Html.BeginForm("MoviesByYear", "Movie", FormMethod.Get))
+{
+    <label>Enter Year:</label>
+    <input type="number" name="year" required />
+    <button type="submit">Search</button>
+}
+
+@if (Model != null && Model.Any())
+{
+    <table border="1">
+        <tr>
+            <th>Movie Name</th>
+            <th>Director</th>
+            <th>Date of Release</th>
+        </tr>
+        @foreach (var movie in Model)
+        {
+            <tr>
+                <td>@movie.MovieName</td>
+                <td>@movie.DirectorName</td>
+                <td>@movie.DateOfRelease.ToShortDateString()</td>
+            </tr>
+        }
+    </table>
+}
+else if (Model != null)
+{
+    <p>No movies found for the given year.</p>
+}
+
+<p>@Html.ActionLink("Back to List", "Index")</p>

@@ -1,0 +1,20 @@
+﻿@model Code_Challenge_9.Models.Customer
+
+@{
+    ViewBag.Title = "CustomerByOrder";
+}
+
+<h2>CustomerByOrder</h2>
+
+@if (Model != null)
+{
+    <p><strong>Customer ID:</strong> @Model.CustomerID</p>
+    <p><strong>Company Name:</strong> @Model.CompanyName</p>
+    <p><strong>Contact Name:</strong> @Model.ContactName</p>
+    <p><strong>City:</strong> @Model.City</p>
+    <p><strong>Country:</strong> @Model.Country</p>
+}
+else
+{
+    <p>No customer found for this Order ID.</p>
+}

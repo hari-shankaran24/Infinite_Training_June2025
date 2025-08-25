@@ -1,0 +1,35 @@
+﻿@model Movies.Models.Movie
+
+@{
+    ViewBag.Title = "Edit Movie";
+}
+
+<h2>Edit Movie</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(m => m.Mid)
+
+    <div>
+        @Html.LabelFor(m => m.MovieName)
+        @Html.TextBoxFor(m => m.MovieName)
+        @Html.ValidationMessageFor(m => m.MovieName)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.DirectorName)
+        @Html.TextBoxFor(m => m.DirectorName)
+        @Html.ValidationMessageFor(m => m.DirectorName)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.DateOfRelease)
+        @Html.TextBoxFor(m => m.DateOfRelease, "{0:yyyy-MM-dd}", new { type = "date" })
+        @Html.ValidationMessageFor(m => m.DateOfRelease)
+    </div>
+
+    <button type="submit">Save Changes</button>
+}
+<p>@Html.ActionLink("Back to List", "Index")</p>

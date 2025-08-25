@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Movies.Models.Movie>
+@{
+    ViewBag.Title = "Movies By Director";
+    var directorName = Model.FirstOrDefault()?.DirectorName ?? "N/A";
+}
+
+<h2>Movies Directed by @directorName</h2>
+
+<!-- Optional search form -->
+@using (Html.BeginForm("MoviesByDirector", "Movie", FormMethod.Get))
+{
+    <label>Enter Director Name: </label>
+    <input type="text" name="directorName" required />
+    <button type="submit">Search</button>
+}
+
+@if (!Model.Any())
+{
+    <p>No movies found for this director.</p>
+}
+else
+{
+    <table border="1">
+        <tr>
+            <th>Movie Name</th>
+            <th>Date of Release</th>
+        </tr>
+        @foreach (var movie in Model)
+        {
+            <tr>
+                <td>@movie.MovieName</td>
+                <td>@movie.DateOfRelease.ToShortDateString()</td>
+            </tr>
+        }
+    </table>
+}
+
+<p>@Html.ActionLink("Back to List", "Index")</p>
+h>Date of Release</th>
+    </tr>
+    @foreach (var movie in Model)
+    {
+        <tr>
+            <td>@movie.MovieName</td>
+            <td>@movie.DirectorName</td>
+            <td>@movie.DateOfRelease.ToShortDateString()</td>
+        </tr>
+    }
+</table>
+
+<p>@Html.ActionLink("Back to List", "Index")</p>

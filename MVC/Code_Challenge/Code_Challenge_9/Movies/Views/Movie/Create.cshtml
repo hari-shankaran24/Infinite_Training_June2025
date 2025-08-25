@@ -1,0 +1,33 @@
+﻿@model Movies.Models.Movie
+
+@{
+    ViewBag.Title = "Create Movie";
+}
+
+<h2>Create Movie</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        @Html.LabelFor(m => m.MovieName)
+        @Html.TextBoxFor(m => m.MovieName)
+        @Html.ValidationMessageFor(m => m.MovieName)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.DirectorName)
+        @Html.TextBoxFor(m => m.DirectorName)
+        @Html.ValidationMessageFor(m => m.DirectorName)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.DateOfRelease)
+        @Html.TextBoxFor(m => m.DateOfRelease, "{0:yyyy-MM-dd}", new { type = "date" })
+        @Html.ValidationMessageFor(m => m.DateOfRelease)
+    </div>
+
+    <button type="submit">Save</button>
+}
+<p>@Html.ActionLink("Back to List", "Index")</p>

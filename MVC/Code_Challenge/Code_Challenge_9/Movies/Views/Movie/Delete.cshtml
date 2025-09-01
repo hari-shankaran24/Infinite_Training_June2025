@@ -19,10 +19,12 @@
     <dd>@Model.DateOfRelease.ToShortDateString()</dd>
 </dl>
 
-@using (Html.BeginForm("DeleteConfirmed", "Movie", new { id = Model.Mid }))
-{
-    @Html.AntiForgeryToken()
-    <button type="submit">Confirm Delete</button>
-}
+Server Error in '/' Application.
+The resource cannot be found.
+Description: HTTP 404. The resource you are looking for (or one of its dependencies) could have been removed, had its name changed, or is temporarily unavailable.  Please review the following URL and make sure that it is spelled correctly.
+
+Requested URL: /Movie/DeleteConfirmed/1
+
+Version Information: Microsoft .NET Framework Version:4.0.30319; ASP.NET Version:4.8.9282.0
 
 <p>@Html.ActionLink("Cancel", "Index")</p>

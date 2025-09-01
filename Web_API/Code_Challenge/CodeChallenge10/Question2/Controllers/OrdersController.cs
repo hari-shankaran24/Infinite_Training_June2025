@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
-using Question2.Models; 
+using Question2.Models;
 using System.Web.Http.Description;
 
 namespace Question2.Controllers
 {
-    [RoutePrefix("api/orders")] // Route prefix for all routes in this controller
+    [RoutePrefix("api/orders")]
     public class OrdersController : ApiController
     {
-        private NorthwindEntities2 db = new NorthwindEntities2(); // ✅ Updated context
+        private NorthwindEntities2 db = new NorthwindEntities2();
 
         // GET: api/orders/employee/5
         [HttpGet]

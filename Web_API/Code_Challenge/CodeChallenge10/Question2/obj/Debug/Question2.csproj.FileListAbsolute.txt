@@ -87,3 +87,5 @@ C:\Users\harish\Desktop\Workspace\Web_API\Code_Challenge\CodeChallenge10\Questio
 C:\Users\harish\Desktop\Workspace\Web_API\Code_Challenge\CodeChallenge10\Question2\obj\Debug\Question2.csproj.CopyComplete
 C:\Users\harish\Desktop\Workspace\Web_API\Code_Challenge\CodeChallenge10\Question2\obj\Debug\Question2.dll
 C:\Users\harish\Desktop\Workspace\Web_API\Code_Challenge\CodeChallenge10\Question2\obj\Debug\Question2.pdb
+C:\Users\harish\Desktop\Workspace\Web_API\Code_Challenge\CodeChallenge10\Question2\bin\Swashbuckle.Core.dll
+C:\Users\harish\Desktop\Workspace\Web_API\Code_Challenge\CodeChallenge10\Question2\bin\WebActivatorEx.dll

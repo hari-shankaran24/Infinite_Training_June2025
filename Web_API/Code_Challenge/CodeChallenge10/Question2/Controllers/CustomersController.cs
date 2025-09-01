@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Description;
-using Question2.Models; // ✅ Updated namespace
+using Question2.Models; 
 
 namespace Question2.Controllers
 {
     public class CustomersController : ApiController
     {
-        private NorthwindEntities2 db = new NorthwindEntities2(); // ✅ Updated context
+        private NorthwindEntities2 db = new NorthwindEntities2(); 
 
         // GET: api/customers/bycountry/{country}
         [HttpGet]
@@ -24,7 +24,6 @@ namespace Question2.Controllers
 
             try
             {
-                // ✅ Call stored procedure using Entity SQL
                 var customers = db.Database.SqlQuery<Customer>(
                     "EXEC GetCustomersByCountry @p0", country
                 ).ToList();
